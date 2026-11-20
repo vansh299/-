@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>My Website</title>
+<style>
+    .container{
+         width: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    }
+
+    input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3730a3;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+    <div class="container"><div>
+        <input type="text" id="url" placeholder="Enter URL">
+        <button type="button" onclick=generateqr()>Generate</button>
+    </div>
+</div>
+    <br><br>
+
+    <img id="qr" width="200">
+
+
+
+    <script src="{{ url_for('scripts', path='app.js') }}"></script>
+</body>
+
+</html>
